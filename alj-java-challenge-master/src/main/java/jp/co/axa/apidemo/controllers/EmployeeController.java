@@ -4,8 +4,8 @@ import jp.co.axa.apidemo.entities.Employee;
 import jp.co.axa.apidemo.exception.EmployeeNotFoundException;
 import jp.co.axa.apidemo.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.http.*;
 
 import java.util.List;
 import java.util.Objects;
@@ -26,9 +26,10 @@ public class EmployeeController {
      * Retrieve all employees
      * @return List<Employee>
      */
-    @GetMapping("/employees")
+    @GetMapping("/employees/getAll")
     public List<Employee> getEmployees() {
-        List<Employee> employees = employeeService.retrieveEmployees();
+        List<Employee> employees = employeeService.getEmployees();
+        System.out.println("Employee Fetched Successfully");
         return employees;
     }
 
@@ -44,7 +45,7 @@ public class EmployeeController {
     /**
      * Save employee
      */
-    @PostMapping("/employees")
+    @PostMapping("/employees/save")
     public void saveEmployee(Employee employee){
         employeeService.saveEmployee(employee);
         System.out.println("Employee Saved Successfully");

@@ -24,7 +24,7 @@ public class EmployeeServiceImpl implements EmployeeService{
      * Retrieve all employees
      * @return List<Employee>
      */
-    public List<Employee> retrieveEmployees() {
+    public List<Employee> getEmployees() {
         List<Employee> employees = employeeRepository.findAll();
         return employees;
     }

@@ -43,9 +43,15 @@ Application (with the embedded H2 database) is ready to be used ! You can access
 - Is the application running as expected
 - No performance issues
 
+#### What I did this time
+- Added cache logic for db calls using ehcache(which is spring inbuilt server)
+- Added test cases for verify all service methods
+- Protect controller endpoint using in memory user and password
+- Added comments
+
 #### Your experience in Java
 
 Please let us know more about your Java experience in a few sentences. For example:
 
 - I have 8 years experience in Java and I started to use Spring Boot from last 3 year
-- As I am working in spring boot from last 3 year. so i have good knowledge of spring boot concepts.
+- As I am working in spring boot from last 5 year. so i have good knowledge of spring boot concepts.
